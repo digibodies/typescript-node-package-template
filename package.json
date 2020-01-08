@@ -1,15 +1,16 @@
 {
   "name": "typescript-node-package-template",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Project Template for typescript projects intended to be published as github packages.",
   "main": "dist/index.js",
+  "declaration": true,
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "deploy": "npm publish",
-    "lint": "eslint . --ext .js,.ts"
+    "lint": "eslint . --ext .js,.ts",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
