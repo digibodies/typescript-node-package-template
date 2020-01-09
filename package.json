@@ -1,0 +1,70 @@
+{
+  "name": "typescript-node-package-template",
+  "private": false,
+  "version": "1.0.1",
+  "description": "Project Template for typescript projects intended to be published as github packages.",
+  "main": "dist/index.js",
+  "declaration": true,
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "eslint . --ext .js,.ts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/digibodies/typescript-node-package-template.git"
+  },
+  "keywords": [
+    "node",
+    "typescript",
+    "github",
+    "jest"
+  ],
+  "author": "Blaine Garrett <blaine@blainegarrett.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/digibodies/typescript-node-package-template/issues"
+  },
+  "homepage": "https://github.com/digibodies/typescript-node-package-template#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@digibodies"
+  },
+  "engines": {
+    "node": ">=8"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.25",
+    "@types/node": "^12.7.5",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.7.2",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.4.1",
+    "tslint": "^5.20.0",
+    "typescript": "^3.6.3"
+  },
+  "dependencies": {},
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".test.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  }
+}
